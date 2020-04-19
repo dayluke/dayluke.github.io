@@ -290,6 +290,7 @@ h3 {
 .project {
     position: relative;
     transition: var(--trans-time);
+    overflow: hidden;
 }
 
 .project:hover {
@@ -305,6 +306,7 @@ h3 {
 
 .project:hover > img {
     opacity: 0.5;
+    transform: scale(1.1);
 }
 
 .project .description {
@@ -362,4 +364,41 @@ h3 {
 .footer button:hover {
     background: var(--clr-light);
     color: var(--clr-dark);
+}
+
+/* OTHER PAGES */
+
+.page__project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__project--intro {
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+}
+
+.page__title {
+    margin-bottom: .25em;
+    font-weight: var(--fw-bold);
+}
+
+.page__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+}
+
+.page__project--description {
+}
+
+.page__description {
+    width: 80%;
+    text-align: center;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-reg);
 }
