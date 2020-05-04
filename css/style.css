@@ -123,19 +123,18 @@ h3 {
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
 }
 
 .section__subtitle--intro {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secondary);
     margin-bottom: 1em;
     display: inline-block;
 }
 
 .section__subtitle--projects {
     padding: 2% 5.15%;
-    font-family: var(--ff-secondary);
 }
 
 /* Intro */
@@ -167,11 +166,7 @@ h3 {
     .intro {
         padding: 0;
         height: 100%;
-        position: relative;
-        display: flex;
-        justify-content: center;
         flex-direction: row;
-        flex-wrap: nowrap;
         align-items: center;
     }
 
@@ -411,20 +406,30 @@ h3 {
     font-weight: var(--fw-bold);
 }
 
-.page__subtitle {
-    margin: 0;
-    font-size: var(--fs-h3);
+.page__subtitle--intro {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secondary);
 }
 
 .page__project--description {
-}
-
-.page__description {
-    width: 80%;
+    margin: 0 10vw;
     text-align: center;
     font-size: var(--fs-h3);
     font-weight: var(--fw-reg);
+}
+
+.page__project--gallery {
+    width: 100%;
+}
+
+
+.page__project--button {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    transition: all 0.5s ease-out;
+}
+
+.page__project--button:hover {
+    background: var(--clr-light);
+    color: var(--clr-dark);
 }
