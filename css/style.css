@@ -305,7 +305,7 @@ h3 {
 }
 
 .project:hover > img {
-    opacity: 0.5;
+    opacity: 0.8;
     transform: scale(1.1);
 }
 
@@ -320,6 +320,7 @@ h3 {
 
 .project:hover > .description {
     left: 10%;
+    filter: brightness(400%);
 }
 
 .view-project {
@@ -364,6 +365,21 @@ h3 {
 .footer button:hover {
     background: var(--clr-light);
     color: var(--clr-dark);
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.footer li {
+    display: inline;
+}
+
+.footer li a {
+    padding: 1em;
 }
 
 /* OTHER PAGES */
