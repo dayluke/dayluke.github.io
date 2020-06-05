@@ -328,6 +328,7 @@ h3 {
     top: 33%;
     right: 10%;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.035);
 }
 
 .view-project:hover {
@@ -439,6 +440,9 @@ h3 {
     width: 100%;
 }
 
+.page__project--view-game {
+    padding-top: 0;
+}
 
 .page__project--button {
     background: var(--clr-dark);
