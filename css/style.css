@@ -373,6 +373,7 @@ h3 {
     padding: 1em;
     padding-bottom: 2em;
     text-align: center;
+    font-size: var(--fs-h3);
 }
 
 .footer li {
@@ -381,6 +382,14 @@ h3 {
 
 .footer li a {
     padding: 1em;
+    text-decoration: none;
+    color: var(--clr-dark);
+    filter: brightness(200%);
+    transition: var(--trans-time);
+}
+
+.footer li a:hover {
+    filter: brightness(400%);
 }
 
 /* OTHER PAGES */
