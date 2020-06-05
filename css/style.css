@@ -428,6 +428,7 @@ h3 {
 }
 
 .page__project--description {
+    flex-direction: column;
     margin: 0 10vw;
     text-align: center;
     font-size: var(--fs-h3);
