@@ -448,4 +448,5 @@ h3 {
 .page__project--button:hover {
     background: var(--clr-light);
     color: var(--clr-dark);
+    cursor: pointer;
 }
