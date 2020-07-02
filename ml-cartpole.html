@@ -27,6 +27,14 @@
         <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+        <!-- Unity -->
+        <link rel="stylesheet" href="unity-builds/cartpole-build/TemplateData/style.css">
+        <script src="unity-builds/cartpole-build/TemplateData/UnityProgress.js"></script>
+        <script src="unity-builds/cartpole-build/Build/UnityLoader.js"></script>
+        <script>
+          var unityInstance = UnityLoader.instantiate("unityContainer", "unity-builds/cartpole-build/Build/Build.json", {onProgress: UnityProgress});
+        </script>
+
     </head>
     <body>
 
@@ -41,13 +49,22 @@
             </p>
         </section>
 
+        <section class="page__project">
+            <div class="webgl-content" style="display: flex">
+                <div id="unityContainer" style="width: 960px; height: 600px"></div>
+                <div class="footer">
+                    <div class="webgl-logo"></div>
+                </div>
+              </div>
+        </section>
+
         <section class="page__project page__project--description">
             <p>
                 Cartpole is a machine learning agent, which uses reinforcement learning
                 to successfully handle the inverted pendulum problem for longer than
                 a human.    
             </p>
-            <ul style="list-style-type: none;">
+            <ul>
                 <strong>Project Details</strong>
                 <li>Made single-handedly</li>
                 <li>Developed in Unity (C#)</li>
@@ -61,7 +78,7 @@
         </section> -->
 
         <section class="page__project page__project--view-game">
-            <a href="https://play.google.com/store/apps/details?id=com.Littlelumos.GolfPads" target="_blank">
+            <a href="https://github.com/dayluke/unity-ml-cartpole" target="_blank">
                 <button class="page__project--button">View Project</button>
             </a>
         </section>

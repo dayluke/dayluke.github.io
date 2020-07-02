@@ -321,6 +321,7 @@ h3 {
 .project:hover > .description {
     left: 10%;
     filter: brightness(400%);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .view-project {
@@ -445,6 +446,11 @@ h3 {
     font-weight: var(--fw-reg);
 }
 
+.page__project--description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .page__project--gallery {
     width: 100%;
 }
@@ -463,4 +469,26 @@ h3 {
     background: var(--clr-light);
     color: var(--clr-dark);
     cursor: pointer;
+}
+
+.slider {
+    margin: 50px auto;
+    max-width: 90%;
+}
+
+.slick-slide > div {
+    transform: scale(0.5);
+    opacity: 0.5;
+    transition: all 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.slick-center > div {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.slider__item > img,
+.slider__item > iframe {
+    width: 100%;
+    height: auto;
 }
