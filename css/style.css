@@ -494,7 +494,8 @@ h3 {
 }
 
 .slider img,
-.slider iframe {
+.slider iframe,
+.slider embed {
     transform: scale(0.5);
     opacity: 0.5;
     filter: blur(2px);
