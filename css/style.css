@@ -79,6 +79,7 @@ button {
     font-family: var(--ff-primary);
     font-size: var(--fs-h3);
     padding: 1.5em;
+    cursor: pointer;
 }
 
 button:focus {outline:0;}
@@ -473,7 +474,6 @@ h3 {
 .page__project--button:hover {
     background: var(--clr-light);
     color: var(--clr-dark);
-    cursor: pointer;
 }
 
 .slider {
