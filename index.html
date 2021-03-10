@@ -31,9 +31,6 @@
     <body>
 
         <header>
-            <div class="logo">
-                <img src="img/logo.png" alt="">
-            </div>
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
             </button>
@@ -42,7 +39,7 @@
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -66,14 +63,42 @@
             <h1 class="section__title section__title--projects">
                 <strong>Meritorious starts with me —</strong>
             </h1>
-            <h2 class="section__subtitle section__subtitle--projects">
-                These are a selection of my recent works.
-            </h2>
+
+            <!--TAG FILTER-->
+            <div id="tag-filter">
+
+                <h2 class="section__subtitle section__subtitle--projects">
+                    These are a selection of my recent works.
+                </h2>
+                
+                <label class="tag-filter-label" for="tags">Filter by tag:</label>
+                <select name="tags" id="tags" onchange="filterTags()">
+                    <option value="">All</option>
+                    <option value="ai">AI</option>
+                    <option value="university">University</option>
+                    <option value="application">Application</option>
+                    <option value="unity">Unity</option>
+                    <option value="game">Game</option>
+                </select>
+
+            </div>
             
             <div class="projects">
 
+                <!-- CARMA -->
+                <div class="project game university unity">
+                    <img src="img/carma-splash-screen.gif" alt="Carma" style="width: 100%;">
+                    <div class="description">
+                        <h3>Carma</h3>
+                        <p>Multiplayer Game</p>
+                    </div>
+                    <a class="project__item">
+                        <button class="view-project" onclick="fadeScreenOut('carma.html')">View Project</button>
+                    </a>
+                </div>
+
                 <!-- YVAGA STATION -->
-                <div class="project">
+                <div class="project game university unity">
                     <img src="img/yvaga-station-background.png" alt="Yvaga Station" style="width: 100%;">
                     <div class="description">
                         <h3>Yvaga Station</h3>
@@ -84,20 +109,8 @@
                     </a>
                 </div>
 
-                <!-- GOLF PADS -->
-                <div class="project">
-                    <img src="img/golf-pads.jpg" alt="Golf Pads" style="width: 100%;">
-                    <div class="description">
-                        <h3>Golf Pads</h3>
-                        <p>Mobile App</p>
-                    </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('golf-pads.html')">View Project</button>
-                    </a>
-                </div>
-
                 <!-- SPOTUBE -->
-                <div class="project">
+                <div class="project application">
                     <img src="img/spotube-1280x800.jpg" alt="Spotube" style="width: 100%;">
                     <div class="description">
                         <h3>Spotube</h3>
@@ -109,10 +122,10 @@
                 </div>
 
                 <!-- ML CARTPOLE -->
-                <div class="project">
+                <div class="project unity ai">
                     <img src="img/unity-cartpole-ml-training-2.gif" alt="Unity ML Cartpole" style="width: 100%;">
                     <div class="description">
-                        <h3>AI Cartpole</h3>
+                        <h3>ML Cartpole</h3>
                         <p>Machine Learning Agent</p>
                     </div>
                     <a class="project__item">
@@ -120,8 +133,44 @@
                     </a>
                 </div>
 
+                <!-- ML PACMAN -->
+                <div class="project unity ai university">
+                    <img src="img/ml-pacman.gif" alt="AI Pacman" style="width: 100%;">
+                    <div class="description">
+                        <h3>ML Pacman</h3>
+                        <p>Machine Learning Agent</p>
+                    </div>
+                    <a class="project__item">
+                        <button class="view-project" onclick="fadeScreenOut('ml-pacman.html')">View Project</button>
+                    </a>
+                </div>
+
+                <!-- AI 8-puzzle -->
+                <div class="project unity ai">
+                    <img src="img/ai-8-puzzle.gif" alt="AI 8-puzzle" style="width: 100%;">
+                    <div class="description">
+                        <h3>AI 8-puzzle</h3>
+                        <p>Artifical Intelligent Agent</p>
+                    </div>
+                    <a class="project__item">
+                        <button class="view-project" onclick="fadeScreenOut('ai-8-puzzle.html')">View Project</button>
+                    </a>
+                </div>
+
+                <!-- GOLF PADS -->
+                <div class="project game application unity">
+                    <img src="img/golf-pads.jpg" alt="Golf Pads" style="width: 100%;">
+                    <div class="description">
+                        <h3>Golf Pads</h3>
+                        <p>Mobile App</p>
+                    </div>
+                    <a class="project__item">
+                        <button class="view-project" onclick="fadeScreenOut('golf-pads.html')">View Project</button>
+                    </a>
+                </div>
+
                 <!-- A BOY AND HIS PHOENIX -->
-                <div class="project">
+                <div class="project game application unity">
                     <img src="img/abahp-background.png" alt="A Boy and His Phoenix" style="width: 100%;">
                     <div class="description">
                         <h3>A Boy and His Phoenix</h3>
@@ -131,10 +180,21 @@
                         <button class="view-project" onclick="fadeScreenOut('a-boy-and-his-phoenix.html')">View Project</button>
                     </a>
                 </div>
+                
+                <!-- PROC MESH GEN -->
+                <div class="project unity university">
+                    <img src="https://via.placeholder.com/1351x644?text=Procedural+Mesh+Generation" alt="Procedural Mesh Generation" style="width: 100%;">
+                    <div class="description">
+                        <h3>Shader & VFX Tool</h3>
+                        <p>Procedural Mesh Generation</p>
+                    </div>
+                    <a class="project__item">
+                        <button class="view-project" onclick="fadeScreenOut('shader-vfx.html')">View Project</button>
+                    </a>
                 </div>
 
                 <!-- IDLE TYPER -->
-                <div class="project">
+                <div class="project game application">
                     <img src="img/idle-typer.gif" alt="Idle Typer" style="width: 100%;">
                     <div class="description">
                         <h3>Idle Typer</h3>
@@ -154,12 +214,13 @@
             <h1 class="section__title--contact">Let's talk!</h1>
             <h3 class="section__subtitle--contact">I'd love to chat with you.</h3>
             <a href="mailto:dayluke01@gmail.com" target="_blank"><button class="contact-me">Contact Me</button></a>
-            <p>Copyright © Luke Day 2020</p>
+            <p>Copyright © Luke Day 2021</p>
         </section>
 
     </body>
 
     <script src="js/script.js"></script>
+    <script src="js/tag-filter.js"></script>
 </html>
 
 <!-- TO DO 
