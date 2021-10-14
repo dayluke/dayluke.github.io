@@ -207,7 +207,7 @@ h3 {
 
     .section__subtitle--intro {
         position: relative;
-        left: -3em;
+        left: -2.5em;
         text-align: right;
         width: calc(100% + 3em);
     }
