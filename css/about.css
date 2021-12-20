@@ -1,0 +1,32 @@
+.about_me_description {
+    padding: 0;
+    flex-direction: column;
+    margin: 0 10vw;
+    text-align: center;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-reg);
+}
+
+.about_me_description h2 {
+    font-size: var(--fs-h2);
+}
+
+.about_me_description p {
+    padding-bottom: 1rem;
+}
+
+.about_me_description p a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 400;
+}
+
+.about_me_description p strong{
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .about_me_description p {
+        font-size: 1rem;
+    }   
+}
