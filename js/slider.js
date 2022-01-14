@@ -7,6 +7,14 @@ $('.slider').slick({
     autoplaySpeed: 2000,
     speed: 900,
     arrows: true,
+	responsive: [
+		{
+			breakpoint: 800,
+			settings: {
+				slidesToShow: 1,
+			}
+		}
+	],
 });
 
 $('iframe').on('click', function() {

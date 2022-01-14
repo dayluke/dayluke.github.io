@@ -525,7 +525,7 @@ h3 {
 }
 
 .slider {
-    width: 90%;
+    width: 100%;
     margin: 0px auto;
 }
 
@@ -548,6 +548,7 @@ h3 {
     opacity: 0.5;
     filter: blur(2px);
     transition: all 0.7s cubic-bezier(.4,0,.2,1);
+	object-fit: contain;
 }
 
 .slick-center {
