@@ -252,12 +252,21 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 8%;
+    transition: all 0.3s;
 }
 
 .project div.pc {
     background-repeat: no-repeat;
     background-size: contain;
     scale: 75%;
+    transition: all 0.3s;
+}
+
+.project div.mobile:hover {
+    scale: 105%;
+}
+.project div.pc:hover {
+    scale: 80%;
 }
 
 .project div {
@@ -270,10 +279,6 @@ h3 {
     text-decoration: none;
 }
 
-.project img:hover {
-    cursor: pointer;
-}
-
 .project .description {
     text-align: left;
     font-size: calc(1.5rem + ((1vw - 0.5rem) * 1.8));
@@ -282,7 +287,7 @@ h3 {
 
 .project .description .title {
     font-weight: 700;
-    font-size: calc(2.25rem + ((1vw - 0.3rem) * 3.3));
+    font-size: calc(2.2rem + ((1vw - 0.3rem) * 3.3));
     padding: 0rem;
 }
 
