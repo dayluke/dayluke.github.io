@@ -5,7 +5,8 @@ function filterTags() {
     var x = document.getElementsByClassName("project");
     for (var i = 0; i < x.length; i++) {
         removeClass(x[i], "show");
-        if (x[i].className.indexOf(currTag.value) > -1) addClass(x[i], "show");
+        // if (x[i].className.indexOf(currTag.value) > -1) addClass(x[i], "show");
+        if (x[i].className.indexOf("") > -1) addClass(x[i], "show");
     }
 }
 

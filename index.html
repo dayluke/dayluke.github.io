@@ -6,7 +6,8 @@
         <title>Luke Day</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Manrope:200,400,600,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700,900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
@@ -31,20 +32,6 @@
 
     </head>
     <body>
-
-        <header>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="about-me.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
         
         <!--HEADER-->
         <section class="intro" id="home">
@@ -59,210 +46,168 @@
                 </p>
 
                 <ul class="social-icons">
-                    <li><a href ="https://twitter.com/dayluke01" target="_blank"><i class="fab fa-twitter fa-3x"></a></i></li>
-                    <li><a href ="https://github.com/dayluke" target="_blank"><i class="fab fa-github fa-3x"></a></i></li>
                     <li><a href ="https://linkedin.com/in/dayluke01" target="_blank"><i class="fab fa-linkedin fa-3x"></a></i></li>
+                    <li><a href ="https://github.com/dayluke" target="_blank"><i class="fab fa-github fa-3x"></a></i></li>
+                    <li><a href ="https://twitter.com/dayluke01" target="_blank"><i class="fab fa-twitter fa-3x"></a></i></li>
                 </ul>
             </div>
         </section>
         
         <!--PROJECTS-->
         <section class="my-projects" id="projects">
-            <h1 class="section__title section__title--projects">
-                <strong>Meritorious starts with me —</strong>
-            </h1>
-
-            <!--TAG FILTER-->
-            <div id="tag-filter">
-
-                <h2 class="section__subtitle section__subtitle--projects">
-                    These are a selection of my recent works.
-                </h2>
-                
-                <label class="tag-filter-label" for="tags">Filter by tag:</label>
-                <select name="tags" id="tags" onchange="filterTags()">
-                    <option value="">All</option>
-                    <option value="game">Games</option>
-                    <option value="mobile">Mobile</option>
-                    <option value="university">University</option>
-                    <option value="ai">AI</option>
-                    <option value="application">Application</option>
-                </select>
-
-            </div>
             
             <div class="projects">
 
                 <!-- HSP -->
-                <div class="project game mobile">
-                    <img src="img/hungry-shark-primal.gif" alt="Hungry Shark Primal" style="width: 100%;">
+                <div class="project">
                     <div class="description">
-                        <h3>Hungry Shark Primal</h3>
-                        <p>Mobile Game</p>
+                        <p class="title"><a href="hungry-shark-primal.html">Hungry Shark Primal</a></p>
+                        <p style="margin-bottom:0">Gameplay Programmer • <a target="_blank" href="https://www.ubisoft.com/en-gb/studio/london">Ubisoft London</a></p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            A premium, casual mobile game and the latest instalment in the
+                            award-winning Hungry Shark franchise.
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('hungry-shark-primal.html')">View Project</button>
-                    </a>
+                        
+                    <div class="lazy mobile" data-bg="img/hsp-gameplay.gif" onclick="fadeScreenOut('hungry-shark-primal.html')" alt="Hungry Shark Primal">
+                        <img src="img/mockup-empty-phone.png" style="scale: 105%;">
+                    </div>
                 </div>
-                
-                <!-- STUFFED -->
-                <div class="project game">
-                    <img src="img/stuffed-splash.jpg" alt="Stuffed" style="width: 100%;">
+                    
+                    <!-- STUFFED -->
+                <div class="project flipped">
                     <div class="description">
-                        <h3>Stuffed</h3>
-                        <p>Multiplayer Game</p>
+                        <p class="title"><a href="stuffed.html">Stuffed</a></p>
+                        <p style="margin-bottom:0">Gameplay Programmer • <a target="_blank" href="https://www.wavingbearstudio.com/">Waving Bear</a></p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            A quirky first-person shooter, that takes place in the dreams
+                            of a little girl. Play as a teddy bear and fight waves of nightmares
+                            as you defend your owner, on your own or with friends.
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('stuffed.html')">View Project</button>
-                    </a>
+
+                    <div class="lazy pc" data-bg="img/stuffed/stuffed-trailer.gif" onclick="fadeScreenOut('stuffed.html')">
+                        <img src="img/stuffed/mockup-empty-laptop.png" style="scale: 130% 110%;">
+                        <!-- <img src="img/stuffed/stuffed-trailer.gif" alt="Stuffed"
+                        style="width:78%"> -->
+                    </div>
                 </div>
 
                 <!-- CASTAN -->
-                <div class="project game university">
-                    <img src="img/castan-gameplay.gif" alt="Castan" style="width: 100%;">
+                <div class="project">
                     <div class="description">
-                        <h3>Castan</h3>
-                        <p>Singleplayer Game</p>
+                        <p class="title"><a href="castan.html">Castan</a></p>
+                        <p style="margin-bottom:0">Lead Programmer • University</p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            An eerie, first-person survival game, set in a post-apocalyptic environment
+                            thriving with overgrown vegetation and foliage. Shoot and loot the variety of mutated, dangerous creatures
+                            to pay off a debt to the mafia.
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('castan.html')">View Project</button>
-                    </a>
+
+                    <div class="lazy pc" data-bg="img/castan-gameplay.gif" onclick="fadeScreenOut('castan.html')">
+                        <img src="img/stuffed/mockup-empty-laptop.png" style="scale: 130% 110%;">
+                    </div>
                 </div>
 
                 <!-- CARMA -->
-                <div class="project game university">
-                    <img src="img/carma-splash-screen.gif" alt="Carma" style="width: 100%;">
+                <div class="project flipped">
                     <div class="description">
-                        <h3>Carma</h3>
-                        <p>Multiplayer Game</p>
+                        <p class="title"><a href="carma.html">Carma</a></p>
+                        <p style="margin-bottom:0">Lead Programmer • University</p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            A casual, multiplayer game based on fast and hectic vehicle 
+                            combat with the addition of many power-ups and killstreaks, set on a miniature planet.
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('carma.html')">View Project</button>
-                    </a>
+
+                    <div class="lazy pc" data-bg="img/carma/carma-gameplay.gif" onclick="fadeScreenOut('carma.html')">
+                        <img src="img/stuffed/mockup-empty-laptop.png" style="scale: 130% 110%;">
+                    </div>
                 </div>
 
                 <!-- SPOTUBE -->
-                <div class="project application">
-                    <img src="img/spotube-1280x800.jpg" alt="Spotube" style="width: 100%;">
+                <div class="project">
                     <div class="description">
-                        <h3>Spotube</h3>
-                        <p>Chrome Extension</p>
+                        <p class="title"><a href="spotube.html">Spotube</a></p>
+                        <p style="margin-bottom:0">Solo Developer</p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            A chrome extension for adding YouTube songs directly to Spotify playlists.
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('spotube.html')">View Project</button>
-                    </a>
+
+                    <div class="lazy pc" data-bg="img/scrnsht-1-1280x800.jpg" onclick="fadeScreenOut('spotube.html')">
+                        <img src="img/stuffed/mockup-empty-laptop.png" style="scale: 130% 110%;">
+                    </div>
                 </div>
 
                 <!-- YVAGA STATION -->
-                <div class="project game university">
-                    <img src="img/yvaga-station-background.png" alt="Yvaga Station" style="width: 100%;">
+                <div class="project flipped">
                     <div class="description">
-                        <h3>Yvaga Station</h3>
-                        <p>Multiplayer Game</p>
+                        <p class="title"><a href="yvaga-station.html">Yvaga Station</a></p>
+                        <p style="margin-bottom:0">Programmer • University</p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            An online, multiplayer, hunt and kill game, involving a 4-player squad
+                            tasked with various space-station missions facing off against a fast, stealthy enemy opponent.
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('yvaga-station.html')">View Project</button>
-                    </a>
-                </div>
-
-                <!-- ML CARTPOLE -->
-                <div class="project ai">
-                    <img src="img/unity-cartpole-ml-training-2.gif" alt="Unity ML Cartpole" style="width: 100%;">
-                    <div class="description">
-                        <h3>ML Cartpole</h3>
-                        <p>Machine Learning Agent</p>
+                    
+                    <div class="lazy pc" data-bg="img/yvaga-station-gameplay.gif" onclick="fadeScreenOut('yvaga-station.html')">
+                        <img src="img/stuffed/mockup-empty-laptop.png" style="scale: 130% 110%;">
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('ml-cartpole.html')">View Project</button>
-                    </a>
-                </div>
-
-                <!-- ML PACMAN -->
-                <div class="project ai university">
-                    <img src="img/ml-pacman.gif" alt="AI Pacman" style="width: 100%;">
-                    <div class="description">
-                        <h3>ML Pacman</h3>
-                        <p>Machine Learning Agent</p>
-                    </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('ml-pacman.html')">View Project</button>
-                    </a>
-                </div>
-
-                <!-- AI 8-puzzle -->
-                <div class="project ai">
-                    <img src="img/ai-8-puzzle.gif" alt="AI 8-puzzle" style="width: 100%;">
-                    <div class="description">
-                        <h3>AI 8-puzzle</h3>
-                        <p>Artifical Intelligent Agent</p>
-                    </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('ai-8-puzzle.html')">View Project</button>
-                    </a>
                 </div>
 
                 <!-- GOLF PADS -->
-                <div class="project game application mobile">
-                    <img src="img/golf-pads.jpg" alt="Golf Pads" style="width: 100%;">
+                <div class="project">
                     <div class="description">
-                        <h3>Golf Pads</h3>
-                        <p>Mobile App</p>
+                        <p class="title"><a href="golf-pads.html">Golf Pads</a></p>
+                        <p style="margin-bottom:0">Solo Developer</p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            A simple, casual, mobile game, in which the player's aim is to successfully land
+                            the most consecutive golf balls onto randomly spawning pads.  
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('golf-pads.html')">View Project</button>
-                    </a>
+                    
+                    <div>
+                        <img src="img/golf-pads-phone.png" alt="Golf Pads">
+                    </div>
                 </div>
-
+                
                 <!-- A BOY AND HIS PHOENIX -->
-                <div class="project game application mobile">
-                    <img src="img/abahp-background.png" alt="A Boy and His Phoenix" style="width: 100%;">
+                <div class="project flipped">
                     <div class="description">
-                        <h3>A Boy and His Phoenix</h3>
-                        <p>Indie Puzzle Game</p>
+                        <p class="title"><a href="a-boy-and-his-phoenix.html">A Boy & His Phoenix</a></p>
+                        <p style="margin-bottom:0">Solo Developer</p>
+                        <p style="margin:0;font-size:calc(1.4rem + ((1vw - 0.5rem) * 1.7));font-weight:200;">
+                            A casual, mobile puzzle game, that won the Falmouth CCC 'Phoenix' game jam.
+                            Work your way through progressively difficult levels, helping the boy and his phoenix get 
+                            to safety.
+                        </p>
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('a-boy-and-his-phoenix.html')">View Project</button>
-                    </a>
-                </div>
-                
-                <!-- PROC MESH GEN -->
-                <div class="project university">
-                    <img src="https://via.placeholder.com/1351x644?text=Procedural+Mesh+Generation" alt="Procedural Mesh Generation" style="width: 100%;">
-                    <div class="description">
-                        <h3>Shader & VFX Tool</h3>
-                        <p>Procedural Mesh Generation</p>
-                    </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('shader-vfx.html')">View Project</button>
-                    </a>
-                </div>
 
-                <!-- IDLE TYPER -->
-                <div class="project game application">
-                    <img src="img/idle-typer.gif" alt="Idle Typer" style="width: 100%;">
-                    <div class="description">
-                        <h3>Idle Typer</h3>
-                        <p>Web App</p>
+                    <div class="lazy mobile" data-bg="img/abahp-background.png" alt="A Boy and His Phoenix">
+                        <img src="img/mockup-empty-phone.png" style="scale: 105%;">
                     </div>
-                    <a class="project__item">
-                        <button class="view-project" onclick="fadeScreenOut('idle-typer.html')">View Project</button>
-                    </a>
                 </div>
-                
+        
+
             </div>
 
         </section>
 
+        <!-- TODO: Make the project images into gifs of gameplay (png of phone/pc screen above gif) -->
+        <!-- TODO: ABOUT ME -->
+
         <!--CONTACT ME-->
         <section class="footer" id="contact">
             <h1 class="section__title--contact">Let's talk!</h1>
-            <h3 class="section__subtitle--contact">I'd love to chat with you.</h3>
             <a href="mailto:dayluke01@gmail.com" target="_blank"><button class="contact-me">Contact Me</button></a>
-            <p>Copyright © Luke Day 2022</p>
+            <p>Copyright © Luke Day 2023</p>
         </section>
 
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.4/dist/lazyload.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/tag-filter.js"></script>
     </body>
 
-    <script src="js/script.js"></script>
-    <script src="js/tag-filter.js"></script>
 </html>
